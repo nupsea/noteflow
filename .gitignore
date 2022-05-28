@@ -50,3 +50,9 @@ coverage.xml
 docs/_build/
 
 logs/
+
+spark-3.2.1-bin-hadoop3.2
+
+DATA/
+1
+spark-3.2.1-bin-hadoop3.2.tgz
