@@ -1,5 +1,9 @@
 
 
+# Slide
+
+[Airflow & Zeppelin: Better Together](https://docs.google.com/presentation/d/1QDa_E_HmQbNeRFC-1PUUQHqWLpjtXRiReNtqEGkNALY/edit?usp=sharing)
+
 # Introduction
 
 This repository is to show you how to integrate Zeppelin with Airflow 2. 
@@ -30,6 +34,16 @@ docker-compose up -d
 ## Step 3. Use Zeppelin + Airflow
 
 Open http://localhost:8085 for Zeppelin and http://localhost:8080 for Airflow
+
+### Add connection in Airflow
+
+First, you need to add Zeppelin connection in Airflow, so that `ZeppelinOperator` can call rest api of Zeppelin to run notebook.
+Here's one screenshot. Host is the Zeppelin server host name (here is the Zeppelin docker container name), port is the Zeppelin server rest api port.
+![image](https://user-images.githubusercontent.com/164491/170644482-4dda682b-33dd-4626-9501-e7440f6a412c.png)
+
+
+
+### Run example dag
 
 There's one dag `zeppelin_example_dag` in Airflow. This dag just run 3 Zeppelin notes:
 * Python Tutorial/01. IPython Basics
