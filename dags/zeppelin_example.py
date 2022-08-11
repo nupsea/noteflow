@@ -5,18 +5,20 @@ from airflow.providers.apache.zeppelin.operators.zeppelin_operator import Zeppel
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
-    'start_date': datetime(2022, 1, 1),
+    'start_date': datetime(2022, 6, 1),
     'email_on_failure': False,
     'email_on_retry': False,
     'retries': 0,
     'retry_delay': timedelta(minutes=5),
+    'catchup': False
 }
 
 
 with DAG('zeppelin_example_dag',
          max_active_runs=1,
-         schedule_interval='0 22 * * *',
-         default_args=default_args) as dag:
+         schedule_interval='0 23 * * *',
+         default_args=default_args
+         ) as dag:
 
     python_task = ZeppelinOperator(
         task_id='python_note',
