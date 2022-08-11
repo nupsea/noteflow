@@ -59,4 +59,7 @@ You can enable it, then Airflow would run these Zeppelin notes.
 ### Additions
 Connect to internal AWS docker port from local.
 
-ssh -L 8890:127.0.0.1:8890 -i <aws-dev>.pem hadoop@<master-ip>
+`ssh -L 8890:127.0.0.1:8890 -i <aws-dev>.pem hadoop@<master-ip>`
+
+
+
